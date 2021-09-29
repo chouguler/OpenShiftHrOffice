@@ -37,11 +37,11 @@ namespace HrOffice
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
-            var host = Configuration["DBHOST"] ?? "localhost";//mysqlhrdev//mysqlhrqa
+            var host = Configuration["DBHOST"] ?? "localhost";//mysqlhrdev//mysqlhrqa //127/0.0.1
             var port = Configuration["DBPORT"] ?? "3306";
             var databasename = Configuration["DBNAME"] ?? "hrdbdev";
-            var userid = Configuration["DBUSER"] ?? "hrAPI";
-            var password = Configuration["DBPASSWORD"] ?? "MySqlhrAPI80";
+            var userid = Configuration["DBUSER"] ?? "hrusername";
+            var password = Configuration["DBPASSWORD"] ?? "hrpassword";
 
             services.AddDbContext<EmpContext>(options =>
             {
